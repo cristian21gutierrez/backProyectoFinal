@@ -26,7 +26,7 @@ const getAllUser = async (req, res) => {
       const users = await getUsersService(req.query);
       res.status(200).json({users})
     } catch (error) {
-       res.status(500).json({error})
+       res.status(500).json(error.message);
     }
 
 }

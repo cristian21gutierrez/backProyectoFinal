@@ -89,7 +89,7 @@ const getUsersService = async ({
 
   const users = await User.find(query);
 
-  if(!users) {
+  if(users.length === 0) {
     throw new Error("no se encontraron usuarios con los filtros seleccionsados")
   }
  
